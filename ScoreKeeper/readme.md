@@ -184,6 +184,8 @@ GridRow{
         //뒤에 배경이 비치는 은은한 회색, rect라고도 쓸 수 있음 !!
         ```
 ## Preview
-스크린샷 2026-04-14 오후 3.32.41
-스크린샷 2026-04-14 오후 3.33.00
-스크린샷 2026-04-14 오후 3.33.11
+<img width="265" height="531" alt="스크린샷 2026-04-14 오후 3 32 41" src="https://github.com/user-attachments/assets/1e3fbbe2-e30e-4fdf-b710-790ff023d1a2" />
+<img width="266" height="535" alt="스크린샷 2026-04-14 오후 3 33 00" src="https://github.com/user-attachments/assets/d3aa9be0-e93a-499b-9bae-97a58c92abc3" />
+<img width="272" height="536" alt="스크린샷 2026-04-14 오후 3 33 11" src="https://github.com/user-attachments/assets/7eff2889-348d-4ae2-88aa-55e3a3186337" />
+
+
