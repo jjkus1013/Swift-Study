@@ -73,8 +73,8 @@ GridRow{
 
   - 상태가 명확하게 나뉘는 상황(준비, 진행, 종료)에서 사용한다
   - 정해진 선택지(case) 안에서만 움직이도록 해 실수를 막아준다
-  
-  ```
+
+```
   enum GameState {
     //enum은 상태가 명확하게 나뉘는 상황에서 사용됨, case와 함께 사용
     case setup
@@ -89,7 +89,7 @@ GridRow{
   - 현재 상태에 따라 화면에 보이는 버튼이나 기능을 바꿔서 보여줄 때 사용한다
   - 보여줄 버튼이나 기능이 없을 때는 EmptyView()를 사용할 수 있다
   
-  ```
+```
   switch scoreboard.state {
                 case .setup:
                     Button("Start Game", systemImage: "play.fill") {
@@ -110,14 +110,14 @@ GridRow{
                     //setup 준비중 playing 게임진행중 gameover 게임끝
                     //버튼을 아예 숨기고 싶을때 EmptyView()를 사용할 수 있음
                 }
-    ```
+```
                 
 - Mutating & For in
 
   - 구조체(struct) 내부의 값을 직접 변경(리셋)하고 싶을 때 mutating을 사용한다
   - 반복문(for-in)을 사용하면 플레이어가 몇 명이든 한꺼번에 점수를 초기화할 수 있다
   
-  ```
+```
   mutating func resetScores(to newValue: Int) {
         //struct 내부의 값을 직접 변경(리셋)하고 싶을 때 mutating을 사용
         //to 뒤에 오는 수가 외부에 적용됨, newValue라는 변수를 사용해 점수를 유연하게 초기화 할 수 있게
@@ -127,14 +127,14 @@ GridRow{
         }
         //0번부터 players 숫자까지 세면서 괄호 안에 있는 행동을 반복
         //지목된 플레이어의 점수를 0으로 바꿔라
- ```      
+```      
         
 - Testing & #expect
 
   - 프로토타입을 다 만들고 기능이 의도대로 잘 작동하는지 미리 테스트 할 때 사용한다
   - #expect를 통해 내가 기대하는 값과 실제 값이 맞는지 확인한다
   
-  ```
+```
   @Test("Reset player scores", arguments: [0, 10, 20])
     func resetScores(to newValue: Int) async throws {
         
@@ -152,13 +152,13 @@ GridRow{
             //기대와 실제가 같으면 초록색 체크, 다르면 빨간색 엑스
         }
     }
-    ```
+```
     
 - thinMaterial
 
-  - .thinMaterial은 뒤에 배경이 비치는 색상 효과?
+  - .thinMaterial은 뒤에 배경이 비치는 색상 효과
   
-  ```
+```
   VStack(alignment: .leading) {
             Text("Game Rules")
                 .font(.headline)
@@ -182,7 +182,8 @@ GridRow{
         .padding()
         .background(.thinMaterial, in: .rect(cornerRadius: 10.0))
         //뒤에 배경이 비치는 은은한 회색, rect라고도 쓸 수 있음 !!
-        ```
+```
+
 ## Preview
 <img width="265" height="531" alt="스크린샷 2026-04-14 오후 3 32 41" src="https://github.com/user-attachments/assets/1e3fbbe2-e30e-4fdf-b710-790ff023d1a2" />
 <img width="266" height="535" alt="스크린샷 2026-04-14 오후 3 33 00" src="https://github.com/user-attachments/assets/d3aa9be0-e93a-499b-9bae-97a58c92abc3" />
